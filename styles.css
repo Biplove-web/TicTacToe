@@ -1,0 +1,103 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #6a1b9a, #8e24aa); /* Gradient purple background */
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Status text */
+#status {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Game board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px); /* Increased cell size */
+    grid-template-rows: repeat(3, 120px);   /* Increased cell size */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Individual cells */
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 15px; /* Curved edges for cells */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px; /* Increased font size for X and O */
+    font-weight: bold; /* Bold X and O */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.4s ease; /* Flip animation */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell.x {
+    color: #ff5733; /* Color for X */
+}
+
+.cell.o {
+    color: #33aaff; /* Color for O */
+}
+
+.cell:hover {
+    background-color: #f1f1f1; /* Slightly gray background on hover */
+}
+
+.cell.flipped {
+    transform: rotateY(180deg); /* Flip effect when clicked */
+}
+
+/* Popup styles */
+/* Popup styles */
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup-message {
+    background-color: white; /* Keeps the popup box white */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: black; /* Text color stays black */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    margin-bottom: 10px; /* Spacing between message and restart button */
+}
+
+#restartButton {
+    background-color: #6200ea; /* Purple button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#restartButton:hover {
+    background-color: #3700b3; /* Darker purple when hovered */
+}
+
