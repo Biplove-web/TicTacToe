@@ -5,10 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(45deg, #6a1b9a, #8e24aa); /* Gradient purple background */
+    background: linear-gradient(135deg, #8e24aa, #6a1b9a); /* Smooth gradient purple background */
     margin: 0;
     flex-direction: column;
+    color: white; /* Ensures all text is readable */
 }
+
 
 /* Status text */
 #status {
@@ -62,6 +64,7 @@ body {
 
 /* Popup styles */
 /* Popup styles */
+/* Popup styles */
 .popup {
     display: none;
     justify-content: center;
@@ -71,33 +74,32 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    background: rgba(0, 0, 0, 0.5); /* Slightly dark overlay for emphasis */
     z-index: 1000;
-    text-align: center;
 }
 
 .popup-message {
     background-color: white; /* Keeps the popup box white */
-    padding: 20px;
+    padding: 15px 25px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
     text-align: center;
-    color: black; /* Text color stays black */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
-    margin-bottom: 10px; /* Spacing between message and restart button */
 }
 
 #restartButton {
     background-color: #6200ea; /* Purple button */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 15px;
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
 }
 
 #restartButton:hover {
-    background-color: #3700b3; /* Darker purple when hovered */
+    background-color: #3700b3; /* Darker purple on hover */
 }
+
 
